@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Home Page</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/ReimbursementSystem/resources/css/user.css">
+</head>
+<body>
+	<ul>
+		<li class="dropdown">
+			<h4 class="dropbtn">Welcome to your home page User: <span id="username"></span></h4>
+			<div class="dropdown-content">
+				<p>First Name: <span id="firstname"></span></p>
+				<p>Last Name: <span id="lastname"></span></p>
+				<p>Email: <span id="email"></span></p>
+			</div>
+		</li>
+		<li>
+			<!--  <button onclick=location.replace("/ReimbursementSystem/api/forward/logout") id="logout">Logout</button>-->
+			<button onclick=location.replace("/ReimbursementSystem/api/forward/logout") id="logout">Logout</button>
+			<!--  <form style="float:right" method="get" action="/ReimbursementSystem/api/forward/logout">
+				<input type="submit" value="Logout">-->
+			</form>
+		</li>
+
+	</ul>
+	<ol id="myReimbList" >
+		<h1 class="center">Reimbursements</h1>
+	</ol>
+		
+	<table id="myReimbTable" class="table">
+		<thead>
+		  <tr>
+			<th scope="col">Reimbursement Id</th>
+			<th scope="col">Amount</th>
+			<th scope="col">Submitted</th>
+			<th scope="col">Resolved</th>
+			<th scope="col">Description</th>
+			<th scope="col">Reciept</th>
+			<th scope="col">Author</th>
+			<th scope="col">Resolver</th>
+			<th scope="col">Status</th>
+			<th scope="col">Type</th>
+			
+		  </tr>
+		</thead>
+		
+		
+		<tbody id="reimbTableBody">
+		
+		
+		</tbody>
+	  </table>
+	
+<form>
+	<label for="description">Description: </label><br>
+	<input type="text" id="description" name="description" required><br>
+	<input type="radio" id="1" name="typeid" checked="checked"  value="lodging" required>
+  <label for="lodging">Lodging</label><br>
+  <input type="radio" id="2" name="typeid" value="food" required>
+  <label for="food">Food</label><br>
+  <input type="radio" id="3" name="typeid" value="travel" required>
+  <label for="travel">Travel</label><br>
+  <input type="radio" id="4" name="typeid" value="other" required>
+  <label for="other">Other</label><br>
+	<label for="amount">Amount</label>
+	<input type="number" id="amount" name="amount" min="1" required>
+	<input type="button" id="reimbSubmitButton"  value="Submit Reimbursement">
+</form>
+
+<script type="text/javascript" src="/ReimbursementSystem/resources/js/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SPW Reimbursements</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" href="/ReimbursementSystem/resources/css/welcomepage.css">
+</head>
+<body>
+	<div class="container-lg ">
+		<div class="row"> 
+	<img src="/ReimbursementSystem/resources/images/SPW.png" class="rounded float-left mt-3" alt="SPW Logo" style="height: 75px; width: 100px;">
+	<h4 class=" display-4 text-center justify-content-md-center">Speedwagon Foundation Reimbursement System</h4>
+</div>
+	<div class="row justify-content-md-center bg-light border border-dark rounded">
+		<p class="d-flex text-center justify-content-center lead">Welcome, valued member of the Speedwagon Foundation. We pride ourselves on being the backbone of medical research and environmental conservation. We want to help you, help us, help the world. </p>
+
+		
+		<p class="d-flex justify-content-center">Please log in:</p>
+		<form class="d-inline-flex p-2 align-self-center justify-content-center " method="post" action="/ReimbursementSystem/api/forward/login">
+			
+			<input type="text" placeholder="enter username" name="username"/>
+			<br>
+			<input type="password" placeholder="enter password" name="password"/>
+			<br>
+			<input type="submit" value="Login"/>
+		</form>
+		
+	</div>
+	<br/>
+	<figure class="text-end">
+		<blockquote class="blockquote">
+		  <p>At the beginning of the century, a lone Englishman by the name of Robert E. O. Speedwagon, arrived in the USA and started his own oil business. Because of this he became one of the world's richest men. Speedwagon decided that after his demise, the large sum of his fortune would be used for medical research and wild animal and plant protection. In this organization exists a department called the Supernatural Research Department, which is responsible for supplying the Joestar Family with everything they need. This was the will of Speedwagon, who died in 1952.</p>
+		</blockquote>
+		<figcaption class="blockquote-footer">
+		  Someone <cite title="Source Title">somewhere</cite>
+		</figcaption>
+	  </figure>
+	</div>
+	<!--<form method="get" action="/ReimbursementSystem/api/forward/goTest">
+		<input type="submit" value="Go to test get Users">
+	</form>-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

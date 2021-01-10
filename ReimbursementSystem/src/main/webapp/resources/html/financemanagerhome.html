@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Finance Manager Home Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="/ReimbursementSystem/resources/css/financemanager.css">
+	
+
+
+</head>
+
+<body>
+	<ul>
+		<li>
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button"
+					id="dropdownMenuButton" data-bs-toggle="dropdown"
+					aria-expanded="false">Welcome to your home page Finance Manager: <span id="username"></span></button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<li><p class="dropdown-item" >First Name: <span id="firstname"></span></p></li>
+					<li><p class="dropdown-item">Last Name: <span id="lastname"></span></p></li>
+					<li><p class="dropdown-item" >Email: <span id="email"></span></p></li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<button onclick=location.replace("/ReimbursementSystem/api/forward/logout") id="logout">Logout</button>
+			<!--<form style="float:right" method="get" action="/ReimbursementSystem/api/forward/logout">
+				<input type="submit" value="Logout">
+			</form>-->
+		</li>
+
+	</ul>
+
+	<ol id="myReimbList" >
+		<h1 class="center">Reimbursements</h1>
+	</ol>
+
+
+	<div id="selectionScreen" class="modal">
+
+		<form class="modal-content animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('selectionScreen').style.display='none'" class="close"
+					title="Close Modal">&times;</span>
+
+			</div>
+
+			<div class="container">
+				<table id="myReimb" class="table">
+					<thead>
+						<tr>
+							<th scope="col">Reimbursement Id</th>
+							<th scope="col">Amount</th>
+							<th scope="col">Submitted</th>
+							<th scope="col">Resolved</th>
+							<th scope="col">Description</th>
+							<th scope="col">Reciept</th>
+							<th scope="col">Author</th>
+							<th scope="col">Resolver</th>
+							<th scope="col">Status</th>
+							<th scope="col">Type</th>
+
+						</tr>
+					</thead>
+
+
+					<tbody id="myReimbTableBody">
+
+
+					</tbody>
+				</table>
+			</div>
+
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('selectionScreen').style.display='none'"
+					class="cancelbtn">Cancel</button>
+				<input type="button" id="approveButton" class="btn btn-success" value="Approve">
+				<input type="button" id="denyButton" class="btn btn-danger" value="Deny">
+			</div>
+		</form>
+	</div>
+
+
+
+	<table id="myReimbTable" class="table">
+		<thead>
+			<tr>
+				<th scope="col">Reimbursement Id</th>
+				<th scope="col">Amount</th>
+				<th scope="col">Submitted</th>
+				<th scope="col">Resolved</th>
+				<th scope="col">Description</th>
+				<th scope="col">Reciept</th>
+				<th scope="col">Author</th>
+				<th scope="col">Resolver</th>
+				<th scope="col">Status</th>
+				<th scope="col">Type</th>
+
+			</tr>
+		</thead>
+
+
+		<tbody id="reimbTableBody">
+
+
+		</tbody>
+	</table>
+	<form>
+		<select name="filterType" id="options">
+			<option value="None">No Filter</option>
+			<option value="Lodging">Lodging</option>
+			<option value="Travel">Travel</option>
+			<option value="Food">Foods</option>
+			<option value="Other">Other</option>
+			<option value="Pending">Pending</option>
+			<option value="Approved">Approved</option>
+			<option value="Denied">Denied</option>
+		</select> <input type="button" id="filterButton" value="Filter">
+	</form>
+	<script type="text/javascript" src="/ReimbursementSystem/resources/js/financemanager.js"></script>
+</body>
+
+</html>
